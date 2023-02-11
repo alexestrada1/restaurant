@@ -1,0 +1,1 @@
+document.querySelector(".content").appendChild(function(){const e=document.createElement("div");return e.textContent="Cody",e.classList.add("hello"),e}());
