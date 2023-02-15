@@ -19,15 +19,28 @@ function createnavBar() {
 
   return navBar;
 }
-function createMain(){
-    const main = document.createElement('main');
-    main.classList.add('main')
-    return main;
+
+function createLogo() {
+  const logo = document.createElement("img");
+  logo.src = "/Users/alexestrada/repos/restaurant/src/restaurant-logo.png";
+  logo.classList.add('logo');
+  return logo;
+}
+function createMain() {
+  const main = document.createElement("main");
+  main.classList.add("main");
+  return main;
 }
 
 function loadPage() {
   const content = document.querySelector(".content");
-  content.appendChild(createnavBar());
+
+  const header = document.createElement("div");
+  header.classList.add("header");
+  header.appendChild(createLogo());
+  header.appendChild(createnavBar());
+
+  content.appendChild(header)
   content.appendChild(createMain());
 }
 export default loadPage;
